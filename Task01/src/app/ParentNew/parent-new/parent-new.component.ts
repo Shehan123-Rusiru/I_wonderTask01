@@ -1,13 +1,13 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-pagrent-new',
+  selector: 'app-parent-new',
   template: `
   <app-child-new [chilMessage]="parentMessage"></app-child-new>
 `,
-  styleUrls: ['./pagrent-new.component.scss']
+  styleUrls: ['./parent-new.component.scss']
 })
-export class PagrentNewComponent {
+export class ParentNewComponent {
   parentMessage = 'Data Passing from parent String';
  
 }
