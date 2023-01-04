@@ -3,20 +3,21 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { ParentComponent } from './parent/parent.component';
-import { ParentNewComponent } from './parent-new/parent-new.component';
-import { ChildNewComponent } from './ParentNew/child-new/child-new.component';
+//import { ParentComponent } from './parent/parent.component';
+import { ParentNewModule } from './parent-new/parent-new.module';
+import { ChildNewComponent } from './parent-new/child-new/child-new.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ParentComponent,
-    ParentNewComponent,
+    //ParentComponent,
+   // ParentNewComponent,
     ChildNewComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ParentNewModule
   ],
   providers: [],
   bootstrap: [AppComponent]
