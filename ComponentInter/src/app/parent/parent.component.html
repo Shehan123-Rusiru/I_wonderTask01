@@ -1,2 +1,2 @@
-<app-child [ChildMessage] = "'Hello Child'"></app-child>
-<app-child input="text" ></app-child>
+<app-child [ChildMessage] = "'Hello Child'" (messageEvent)="receivemessage($event)"></app-child> 
+
