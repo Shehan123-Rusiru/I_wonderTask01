@@ -1,4 +1,6 @@
+//import { outputAst } from '@angular/compiler';
 import { Component, Input, OnInit, Output, EventEmitter } from '@angular/core';
+//import { EmailValidator } from '@angular/forms';
 //import { FormControl } from '@angular/forms';
 
 @Component({
@@ -13,6 +15,12 @@ export class ChildComponent implements OnInit {
   @Input()
   ChildMessage!: string;
 
+  @Input()
+  count!: number;
+
+  @Output() countChanged: EventEmitter<number> = new EventEmitter();
+
+
   constructor() { }
 
   ngOnInit(): void { }
@@ -24,7 +32,16 @@ export class ChildComponent implements OnInit {
     
   }
   sendmessage() {
-    this.messageEvent.emit('Hello iam Child');
+    this.messageEvent.emit('Hello i am Child');
+  }
+
+  increment(){
+    this.count++;
+    this.countChanged.emit(this.count);
+  }
+  decrement(){
+    this.count--;
+    this.countChanged.emit(this.count);
   }
 
   
