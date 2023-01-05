@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "Task01": {
+    "ComponentInter": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/task01",
+            "outputPath": "dist/component-inter",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": [
@@ -65,10 +65,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "Task01:build:production"
+              "browserTarget": "ComponentInter:build:production"
             },
             "development": {
-              "browserTarget": "Task01:build:development"
+              "browserTarget": "ComponentInter:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -76,7 +76,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "Task01:build"
+            "browserTarget": "ComponentInter:build"
           }
         },
         "test": {
@@ -100,8 +100,5 @@
         }
       }
     }
-  },
-  "cli": {
-    "analytics": "82257818-72bb-4e5e-aa7e-cc2b86c0d036"
   }
 }
