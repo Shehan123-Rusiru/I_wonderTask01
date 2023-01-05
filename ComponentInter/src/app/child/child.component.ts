@@ -7,6 +7,8 @@ import { Component, Input, OnInit, Output, EventEmitter } from '@angular/core';
   styleUrls: ['./child.component.scss']
 })
 export class ChildComponent implements OnInit {
+
+  bookTitle: string = '';
   @Output() messageEvent = new EventEmitter<string>();
   @Input()
   ChildMessage!: string;
@@ -15,8 +17,14 @@ export class ChildComponent implements OnInit {
 
   ngOnInit(): void { }
 
+ 
+  onAddBook() {
+    console.log('What a click!');
+  }
   sendmessage() {
     this.messageEvent.emit('Hello iam Child');
   }
+
+  
 
 }
