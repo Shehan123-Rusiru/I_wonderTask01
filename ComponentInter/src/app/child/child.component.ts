@@ -8,7 +8,7 @@ import { Component, Input, OnInit, Output, EventEmitter } from '@angular/core';
 })
 export class ChildComponent implements OnInit {
 
-  bookTitle: string = '';
+ public static bookTitle: string = '';
   @Output() messageEvent = new EventEmitter<string>();
   @Input()
   ChildMessage!: string;
@@ -19,7 +19,9 @@ export class ChildComponent implements OnInit {
 
  
   onAddBook() {
-    console.log('What a click!');
+    ChildComponent.bookTitle = "What a click!";
+    this.messageEvent.emit(ChildComponent.bookTitle);
+    
   }
   sendmessage() {
     this.messageEvent.emit('Hello iam Child');

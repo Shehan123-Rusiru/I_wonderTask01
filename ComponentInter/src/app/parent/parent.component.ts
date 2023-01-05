@@ -17,5 +17,8 @@ export class ParentComponent implements OnInit {
   receivemessage(msg: any) {
     alert(msg);
   }
+  receiveClickmessage(msgC: any) {
+    alert(msgC);
+  }
 
 }
