@@ -12,16 +12,18 @@ export class ChildComponent implements OnInit {
 
  public static bookTitle: string = '';
   @Output() messageEvent = new EventEmitter<string>();
-  @Input()
-  ChildMessage!: string;
+  @Input() ChildMessage: string;
 
-  @Input()
-  count!: number;
+  @Input() count: number;
 
   @Output() countChanged: EventEmitter<number> = new EventEmitter();
 
 
-  constructor() { }
+  constructor() {
+
+    this.count = 0;
+    this.ChildMessage = "";
+   }
 
   ngOnInit(): void { }
 
